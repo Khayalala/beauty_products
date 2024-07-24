@@ -1,0 +1,218 @@
+@import "../scss/utilities/_reset.scss";
+@import "../scss/utilities/_fonts.scss";
+@import "../scss/utilities/_variables.scss";
+@import "../scss//utilities/_mixins.scss";
+@import "../scss/utilities/_global.scss";
+@import "../scss/components/_checkbox.scss";
+@import "../scss/components/_footer.scss";
+
+header{
+    @include flex($display:flex, $justify:space-between, $align:center);
+    padding: 16px 112px;
+    .header_logo .menu_icon{
+        width: 20px;
+        height: 14px;
+        display: none;
+    }
+    .header_logo .logo{
+        width: 69px;
+        height: 56px;
+    }
+    h1.odeme{
+        @include fonts($family:$primary-font-family, $size:34px, $line-height:45px, $text-align:right, $text-color:$background-color);
+    }
+}
+
+.payment_container{
+    width: 100%;
+    background-color: rgba(246, 246, 248, 1);
+    @include flex($display:flex, $justify:center, $align: start, $gap:32px);
+
+    .private_info{
+        width: 696px;
+        height: 570px;
+        background-color: rgba(255, 255, 255, 1);
+        padding: 18px 32px;
+        margin-bottom: 88px;
+        margin-top: 32px;
+
+        div.shexsi_melumatlar, div.unvan, div.payment_method{
+            @include flex($display:flex, $justify:space-between, $align:center);
+            @include fonts($family:$primary-font-family, $size:$fs-xxl, $text-align:left, $text-color:background-color);
+            padding: 10px 0;
+        }
+
+        form{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            place-items: center;
+            column-gap: 32px;
+            row-gap: 24px;
+            margin-top: 10px;
+            div.input{
+                @include flex($display:flex, $direction:column, $gap:8px);
+                span{
+                    @include fonts($family:$primary-font-family, $size:$fs-md, $text-align:left, $text-color:background-color);
+                }
+                input{
+                    width: 300px;
+                    height: 48px;
+                    padding: 16px 16px;
+                    border: 1px solid rgba(189, 189, 189, 1);
+                    border-radius: 8px;
+                    &::placeholder{
+                        @include fonts($family:$primary-font-family, $size:$fs-md, $text-color:rgba(130, 130, 130, 1));
+                    }
+                }
+                div.phone-input-container{
+                    position: relative;
+                    input{
+                        padding-left: 70px;
+                    }
+                }
+                select.country-code-select{
+                    position: absolute;
+                    left: 6px;
+                    top: 14px;
+                    @include fonts($family:$primary-font-family, $size:$fs-md, $text-color:$background-color);
+                    border: none;
+                }
+            }
+        }
+        div.line{
+            width: 632px;
+            height: 1px;
+            background-color: rgba(130, 130, 130, 1);
+            margin: 32px 0;
+        }        
+    }
+
+    .total_container{
+        margin-top: 32px;
+        width: 280px;
+        height: 341px;
+        background-color: rgba(255, 255, 255, 1);
+        @include flex($display:flex, $direction:column, $justify:center, $gap:24px);
+        padding-left: 24px;
+        padding-right: 20px;
+        span.total{
+            @include fonts($family:$primary-font-family, $size:$fs-xxl, $text-align:left, $text-color:$background-color);
+        }
+        div.total_info{
+            span{
+                @include fonts($family:$primary-font-family, $size:$fs-md, $text-align:left, $text-color:$background-color);
+            }
+            span.price{
+                @include fonts($size:$fs-lg, $weight:600, $text-align:right);
+            }
+        }
+        .line{
+            width: 240px;
+            height: 1px;
+            background-color: $background-color;
+        }
+        div.total_amount{
+            span{
+                @include fonts($family:$primary-font-family, $size:$fs-lg, $weight:600, $text-align:left, $text-color:$background-color);
+            }
+            span.price{
+                @include fonts($size:$fs-xxl, $weight:700, $text-color:$secondary-color);
+            }
+        }
+        div.total_info,  div.total_amount{
+            @include flex($display:flex, $justify:space-between, $align:center);
+        }
+    }
+}
+
+@media screen and (max-width: map-get($grid-breakpoints, "sm")){
+    header{
+        padding: 16px 30px;
+        width: 100vw;
+        .header_logo{
+            @include flex($display:flex, $align:center, $gap:12px);
+        }
+        .header_logo .menu_icon{
+            display: block;
+        }
+        .header_logo .logo{
+            width: 40px;
+            height: 28px;
+        }
+        h1.odeme{
+            @include fonts($size:$fs-xxl, $line-height:24px);
+        }
+    }
+    .payment_container{
+        width: 100%;
+        background-color: $primary-color;
+        @include flex($direction:column, $justify:center, $align: center, $gap:15px);
+        .private_info{
+            width: 100vw;
+            height: auto;
+            padding: 18px 16px;
+            margin-bottom: 30px;
+            margin-top: 16px;
+            div.shexsi_melumatlar, div.unvan, div.payment_method{
+                font-size: $fs-md;
+                padding: 10px 16px;
+            }
+            form{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                div.input{
+                    @include flex($display:flex, $direction:column, $gap:8px);
+                }
+                button{
+                    width: 300px;
+                }
+            }
+            div.line{
+                width: 350px;
+                height: 1px;
+                background-color: rgba(130, 130, 130, 1);
+                margin: 32px 0;
+            }  
+        }
+        .total_container{
+            margin-bottom: 60px;
+            margin-top: 10px;
+            width: 350px;
+            height: 341px;
+            background-color: rgba(255, 255, 255, 1);
+            @include flex($display:flex, $direction:column, $justify:center, $gap:24px);
+            padding-left: 24px;
+            padding-right: 20px;
+            span.total{
+                @include fonts($family:$primary-font-family, $size:$fs-lg, $text-align:left, $text-color:$background-color);
+            }
+            div.total_info{
+                span{
+                    @include fonts($family:$primary-font-family, $size:$fs-sm, $text-align:left, $text-color:$background-color);
+                }
+                span.price{
+                    @include fonts($size:$fs-md, $weight:600, $text-align:right);
+                }
+            }
+            .line{
+                width: 310px;
+                height: 1px;
+                background-color: $background-color;
+            }
+            div.total_amount{
+                span{
+                    @include fonts($family:$primary-font-family, $size:$fs-lg, $weight:600, $text-align:left, $text-color:$background-color);
+                }
+                span.price{
+                    @include fonts($size:$fs-xxl, $weight:700, $text-color:$secondary-color);
+                }
+            }
+            div.total_info,  div.total_amount{
+                @include flex($display:flex, $justify:space-between, $align:center);
+            }
+        }
+    }
+}
+
+

@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment</title>
+    <link rel="stylesheet" href="./css/payment.css">
+</head>
+<body>
+    <header>
+        <div class="header_logo">
+            <div class="menu_icon"><img src="./assets/icons/menu_black.svg" alt="menu"></div>
+            <div class="logo"><img src="./assets/images/header_logo_pay.png" alt="header logo"></div>
+        </div>
+        <h1 class="odeme">Ödəmə</h1>
+    </header>
+
+    <section class="payment_container">
+        <div class="private_info">
+            <div class="shexsi_melumatlar">
+                <span>1. Şəxsi məlumatlar</span>
+                <div class="checkbox-wrapper-12">
+                    <div class="cbx">
+                      <input id="cbx-12" type="checkbox" checked="" />
+                      <label for="cbx-12"></label>
+                      <svg width="15" height="14" viewBox="0 0 15 14" fill="none">
+                        <path d="M2 8.36364L6.23077 12L13 2"></path>
+                      </svg>
+                    </div>
+                  
+                    <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+                      <defs>
+                        <filter id="goo-12">
+                          <feGaussianBlur
+                            in="SourceGraphic"
+                            stdDeviation="4"
+                            result="blur"
+                          ></feGaussianBlur>
+                          <feColorMatrix
+                            in="blur"
+                            mode="matrix"
+                            values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 22 -7"
+                            result="goo-12"
+                          ></feColorMatrix>
+                          <feBlend in="SourceGraphic" in2="goo-12"></feBlend>
+                        </filter>
+                      </defs>
+                    </svg>
+                </div>
+                  
+            </div>
+            
+            <form>
+                <div class="name input">
+                    <span>Ad</span>
+                    <input type="text" placeholder="Adınızı daxil edin">
+                </div>
+                <div class="surname input">
+                    <span>Soyad</span>
+                    <input type="text" placeholder="Soyadınızı daxil edin">
+                </div>
+                <div class="phone_number input">
+                    <span>Telefon</span>
+                    <div class="phone-input-container">
+                        <input type="tel" class="phone-input" placeholder="00 000 00 00">
+                        <select class="country-code-select">
+                            <option value="+994">+994</option>
+                            <option value="+90">+90</option>
+                            <option value="+1">+1</option>
+                            <option value="+44">+44</option>
+                        </select>
+                        
+                    </div>
+                </div>
+                <div class="email_adress input">
+                    <span>Email</span>
+                    <input type="text" placeholder="nümunə@mail.com">
+                </div>
+                <button class="save">Yadda saxla və davam et</button>
+            </form>
+            <div class="line"></div>
+            <div class="unvan">
+                <span>2. Çatdırılma ünvanı</span>
+                <div class="checkbox-wrapper-12">
+                    <div class="cbx">
+                      <input id="cbx-12" type="checkbox" checked="" />
+                      <label for="cbx-12"></label>
+                      <svg width="15" height="14" viewBox="0 0 15 14" fill="none">
+                        <path d="M2 8.36364L6.23077 12L13 2"></path>
+                      </svg>
+                    </div>
+                  
+                    <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+                      <defs>
+                        <filter id="goo-12">
+                          <feGaussianBlur
+                            in="SourceGraphic"
+                            stdDeviation="4"
+                            result="blur"
+                          ></feGaussianBlur>
+                          <feColorMatrix
+                            in="blur"
+                            mode="matrix"
+                            values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 22 -7"
+                            result="goo-12"
+                          ></feColorMatrix>
+                          <feBlend in="SourceGraphic" in2="goo-12"></feBlend>
+                        </filter>
+                      </defs>
+                    </svg>
+                </div>                  
+            </div>
+            <div class="line"></div>
+            <div class="payment_method">
+                <span>3. Ödəmə metodu</span>
+                <div class="checkbox-wrapper-12">
+                    <div class="cbx">
+                      <input id="cbx-12" type="checkbox" checked="" />
+                      <label for="cbx-12"></label>
+                      <svg width="15" height="14" viewBox="0 0 15 14" fill="none">
+                        <path d="M2 8.36364L6.23077 12L13 2"></path>
+                      </svg>
+                    </div>
+                  
+                    <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+                      <defs>
+                        <filter id="goo-12">
+                          <feGaussianBlur
+                            in="SourceGraphic"
+                            stdDeviation="4"
+                            result="blur"
+                          ></feGaussianBlur>
+                          <feColorMatrix
+                            in="blur"
+                            mode="matrix"
+                            values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 22 -7"
+                            result="goo-12"
+                          ></feColorMatrix>
+                          <feBlend in="SourceGraphic" in2="goo-12"></feBlend>
+                        </filter>
+                      </defs>
+                    </svg>
+                </div>  
+            </div>
+        </div>
+
+        <div class="total_container">
+            <span class="total">Ümumi</span>
+            <div class="total_info">
+                <span>Toplam məbləğ</span>
+                <span class="price">1640₼</span>
+            </div>
+            <div class="total_info">
+                <span>Rayonlara çatdırılma</span>
+                <span class="price">+5₼</span>
+            </div>
+            <div class="total_info">
+                <span>Hədiyyə kimi paketlənmə</span>
+                <span class="price">+12₼</span>
+            </div>
+            <div class="total_info">
+                <span>Promo kod</span>
+                <span class="price">-60₼</span>
+            </div>
+            <div class="line"></div>
+            <div class="total_amount">
+                <span>Cəmi</span>
+                <span class="price">1580₼</span>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer_bottom">
+            <div class="footer_links">
+                <div class="arzum_beauty">
+                    <span>Arzum Beauty</span>
+                    <ul class="links">
+                        <li class="link"><a href="#">Haqqımızda</a></li>
+                        <li class="link"><a href="#">Blog</a></li>
+                        <li class="link"><a href="#">Karyera</a></li>
+                        <li class="link"><a href="#">Korporativ məsuliyyət</a></li>
+                        <li class="link"><a href="#">Filiallar</a></li>
+                    </ul>
+                </div>
+                <div class="menu">
+                    <span>Menu</span>
+                    <ul class="links">
+                        <li class="link"><a href="#">Məşhur brendlər</a></li>
+                        <li class="link"><a href="#">Kampaniyalar</a></li>
+                        <li class="link"><a href="#">Endirimlər və kuponlar</a></li>
+                        <li class="link"><a href="#">Hədiyyələr</a></li>
+                    </ul>
+                </div>
+                <div class="help">
+                    <span>Kömək</span>
+                    <ul class="links">
+                        <li class="link"><a href="#">Tez-tez soruşulan suallar</a></li>
+                        <li class="link"><a href="#">Müştəri xidmətləri</a></li>
+                        <li class="link"><a href="#">Çatdırılma xidməti</a></li>
+                        <li class="link"><a href="#">Geri qaytarılma şərtləri</a></li>
+                        <li class="link"><a href="#">Məhsulu izləmə</a></li>
+                    </ul>
+                </div>
+                <div class="contact">
+                    <span>Əlaqə</span>
+                    <div class="social_media">
+                        <div class="SM_icons"><a href="#"><img src="./assets/images/SM_icons/instagram.svg" alt="instagram"></a></div>
+                        <div class="SM_icons"><a href="#"><img src="./assets/images/SM_icons/facebook.svg" alt="facebook"></a></div>
+                        <div class="SM_icons"><a href="#"><img src="./assets/images/SM_icons/youtube.svg" alt="youtube"></a></div>
+                        <div class="SM_icons"><a href="#"><img src="./assets/images/SM_icons/twitter.svg" alt="twitter"></a></div>
+                    </div>
+                    <p>Qəbul edilən kartlar</p>
+                    <a href="./payment.html"><div class="payment_cards"><img src="./assets/images/payment_cards.png" alt="payment_cards"></div></a>
+                </div>
+            </div>
+            <div class="footer_line"></div>
+            <div class="credits_policies">
+                <span class="copyright">© 2021 Arzum Beauty House</span>
+                <div class="privacy_terms">
+                    <a href="#">Qaydalar və şərtlər</a>
+                    <a href="#">Gizlilik siyasəti</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

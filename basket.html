@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basket</title>
+    <link rel="stylesheet" href="./css/basket.css">
+</head>
+<body>
+    <header>
+        <div class="header_upper">
+            <div class="header_logo">
+                <img class="header_logo_web" src="./assets/images/header_logo.png" alt="header logo">
+                <img class="menu_icon" src="./assets/icons/menu.svg" alt="menu icon" class="">
+                <img class="header_logo_mob" src="./assets/images/header_logo_mob.png" alt="header logo">
+            </div>
+            <form>
+                <div class="search_input">
+                    <div class="search_icon"><img src="./assets/icons/search.svg" alt="search icon"></div>
+                    <input type="text" placeholder="Məhsul axtarın">
+                </div>
+                <div class="language_options">
+                    <div class="globe_icon"><img src="./assets/images/../icons/globe.svg" alt="globe icon"></div>
+                    <select>
+                        <option value="az">AZ</option>
+                        <option value="eng">ENG</option>
+                    </select>
+                </div>
+            </form>
+            <div class="header_tools">
+                <div class="user_black"><img src="./assets/icons/user.svg" alt="user icon"></div>
+                <div class="user_white"><img src="./assets/icons/user_white.svg" alt="user icon"></div>
+                <div class="heart_black"><img src="./assets/icons/heart.svg" alt="heart icon"></div>
+                <div class="heart_white"><img src="./assets/icons/heart_white.svg" alt="heart icon"></div>
+                <div class="purchase_icons">
+                    <div class="bag"><img src="./assets/icons/bag.svg" alt="bag icon"></div>
+                    <div class="cart"><img src="./assets/icons/cart.svg" alt="cart icon"></div>
+                    <div class="cart_item_count">0</div>
+                </div>
+    
+            </div>
+        </div>
+
+        <nav class="navbar">
+            <ul>
+                <li><a class="link" href="#">YENİ</a></li>
+                <li><a class="link" href="#">BRENDLƏR</a></li>
+                <li><a class="link" href="#">ENDİRİMLƏR</a></li>
+                <li><a class="link" href="#">MAKİYAJ</a></li>
+                <li><a class="link" href="#">ÜZ</a></li>
+                <li><a class="link" href="#">SAÇ</a></li>
+                <li><a class="link" href="#">BƏDƏN</a></li>
+                <li><a class="link" href="#">K-BEAUTY</a></li>
+                <li><a class="link" href="#">FIRÇALAR VƏ AKSESSUARLAR</a></li>
+                <li><a class="link" href="#">HƏDİYYƏLİK DƏSTLƏR</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="basket_head">
+        <span>Səbət (4 məhsul)</span>
+        <button>Alış-verişə davam et ></button>
+    </div>
+    <section class="basket_container">
+        <div class="products">
+            <div class="product">
+                <input type="checkbox">
+                <img class="item_img" src="./assets/images/pudra.png" alt="pudra">
+                <div class="info">
+                    <span class="price">240₼</span>
+                    <p class="name">Flormar Göz Farı - Diamonds Terracotta Eyeshadow Golden...</p>
+                    <p class="description"><span>Rəng:</span>Sarı      <span class="size">Ölçü:</span>2 oz/ 60 mL</p>
+                </div>
+                <img class="item_count" src="./assets/images/item_count.svg" alt="item_count">
+                <img class="delete_icon" src="./assets/icons/delete.svg" alt="delete">
+            </div>
+            <div class="product">
+                <input type="checkbox">
+                <img class="item_img" src="./assets/images/most_sold/shampoo.png" alt="shampoo">
+                <div class="info">
+                    <span class="price">67₼</span>
+                    <p class="name">Flormar Göz Farı - Diamonds Terracotta Eyeshadow Golden...</p>
+                    <p class="description"><span>Rəng:</span>Sarı      <span class="size">Ölçü:</span>2 oz/ 60 mL</p>
+                </div>
+                <img class="item_count" src="./assets/images/item_count.svg" alt="item_count">
+                <img class="delete_icon" src="./assets/icons/delete.svg" alt="delete">
+            </div>
+            <div class="product">
+                <input type="checkbox">
+                <img class="item_img" src="./assets/images/mascara_2.png" alt="mascara">
+                <div class="info">
+                    <span class="price">1200₼</span>
+                    <p class="name">Flormar Göz Farı - Diamonds Terracotta Eyeshadow Golden...</p>
+                    <p class="description"><span>Rəng:</span>Sarı      <span class="size">Ölçü:</span>2 oz/ 60 mL</p>
+                </div>
+                <img class="item_count" src="./assets/images/item_count.svg" alt="item_count">
+                <img class="delete_icon" src="./assets/icons/delete.svg" alt="delete">
+            </div>
+            <div class="product">
+                <input type="checkbox">
+                <img class="item_img" src="./assets/images/most_liked/parfume.png" alt="parfum">
+                <div class="info">
+                    <span class="price">240₼</span>
+                    <p class="name">Flormar Göz Farı - Diamonds Terracotta Eyeshadow Golden...</p>
+                    <p class="description"><span>Rəng:</span>Sarı      <span class="size">Ölçü:</span>2 oz/ 60 mL</p>
+                </div>
+                <img class="item_count" src="./assets/images/item_count.svg" alt="item_count">
+                <img class="delete_icon" src="./assets/icons/delete.svg" alt="delete">
+            </div>
+        </div>
+        <div class="line"></div>
+        <div class="total_container">
+            <span class="total">Yekun</span>
+            <div class="total_info">
+                <span>Toplam məbləğ</span>
+                <span class="price">1640₼</span>
+            </div>
+            <div class="total_info">
+                <span>Təcili çatdırılma</span>
+                <select></select>
+                <span class="price">+5₼</span>
+            </div>
+            <div class="total_info">
+                <span>Hədiyyə paketi</span>
+                <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider"></span>
+                </label>
+                <span class="price">+12₼</span>
+            </div>
+            <div class="total_info">
+                <span>Promo kod</span>
+                <span class="price">-60₼</span>
+            </div>
+            <div class="line"></div>
+            <div class="total_amount">
+                <span>Cəmi</span>
+                <span class="price">1580₼</span>
+            </div>
+            <input type="text" placeholder="Promo kod">
+            <button>ÖDƏNİŞ ET</button>
+            <p class="payment_agreement">Ödəniş edərkən <a href="#">İstifadəçi şərtləri</a> ilə razılaşmış olursunuz</p>
+        </div>
+    </section>
+
+    <footer>
+        <div class="email-subscription">
+            <p>Yeniliklərdən xəbərdar olmaq üçün abunə olun</p>
+            <form class="email-input">
+                <input type="email" placeholder="Emailinizi qeyd edin" required>
+                <button type="submit">Abunə ol</button>
+            </form>
+        </div>
+        <div class="footer_bottom">
+            <div class="footer_links">
+                <div class="arzum_beauty">
+                    <span>Arzum Beauty</span>
+                    <ul class="links">
+                        <li class="link"><a href="#">Haqqımızda</a></li>
+                        <li class="link"><a href="#">Blog</a></li>
+                        <li class="link"><a href="#">Karyera</a></li>
+                        <li class="link"><a href="#">Korporativ məsuliyyət</a></li>
+                        <li class="link"><a href="#">Filiallar</a></li>
+                    </ul>
+                </div>
+                <div class="menu">
+                    <span>Menu</span>
+                    <ul class="links">
+                        <li class="link"><a href="#">Məşhur brendlər</a></li>
+                        <li class="link"><a href="#">Kampaniyalar</a></li>
+                        <li class="link"><a href="#">Endirimlər və kuponlar</a></li>
+                        <li class="link"><a href="#">Hədiyyələr</a></li>
+                    </ul>
+                </div>
+                <div class="help">
+                    <span>Kömək</span>
+                    <ul class="links">
+                        <li class="link"><a href="#">Tez-tez soruşulan suallar</a></li>
+                        <li class="link"><a href="#">Müştəri xidmətləri</a></li>
+                        <li class="link"><a href="#">Çatdırılma xidməti</a></li>
+                        <li class="link"><a href="#">Geri qaytarılma şərtləri</a></li>
+                        <li class="link"><a href="#">Məhsulu izləmə</a></li>
+                    </ul>
+                </div>
+                <div class="contact">
+                    <span>Əlaqə</span>
+                    <div class="social_media">
+                        <div class="SM_icons"><a href="#"><img src="./assets/images/SM_icons/instagram.svg" alt="instagram"></a></div>
+                        <div class="SM_icons"><a href="#"><img src="./assets/images/SM_icons/facebook.svg" alt="facebook"></a></div>
+                        <div class="SM_icons"><a href="#"><img src="./assets/images/SM_icons/youtube.svg" alt="youtube"></a></div>
+                        <div class="SM_icons"><a href="#"><img src="./assets/images/SM_icons/twitter.svg" alt="twitter"></a></div>
+                    </div>
+                    <p>Qəbul edilən kartlar</p>
+                    <a href="./payment.html"><div class="payment_cards"><img src="./assets/images/payment_cards.png" alt="payment_cards"></div></a>
+                </div>
+            </div>
+            <div class="footer_line"></div>
+            <div class="credits_policies">
+                <span class="copyright">© 2021 Arzum Beauty House</span>
+                <div class="privacy_terms">
+                    <a href="#">Qaydalar və şərtlər</a>
+                    <a href="#">Gizlilik siyasəti</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

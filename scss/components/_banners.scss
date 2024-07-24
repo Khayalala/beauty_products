@@ -1,0 +1,29 @@
+.banners{
+    @include flex($display: flex, $justify: space-between, $align: center);
+    margin-top: 48px;
+    .banner{
+        width: 591px;
+        height: 291px;
+        cursor: pointer;
+    }
+}
+
+.bottom_banner{
+    width: 100%;
+    height: 319px;
+    margin-top: 56px;
+}
+@media screen and (max-width: map-get($grid-breakpoints, "sm")){
+    .banners{
+        margin-top: 40px;
+        @include flex($direction: column, $justify: center, $gap: 24px);
+        .banner{
+            width: 360px;
+            height: 177px;
+        }
+    }
+    .bottom_banner{
+        height: 129px;
+        margin-top: 40px;
+    }
+}

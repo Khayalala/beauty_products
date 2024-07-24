@@ -1,0 +1,24 @@
+@import "../scss/utilities/_reset.scss";
+@import "../scss/utilities/_fonts.scss";
+@import "../scss/utilities/_variables.scss";
+@import "../scss//utilities/_mixins.scss";
+@import "../scss/utilities/_global.scss";
+@import "../scss/components/_header.scss";
+@import "../scss/components/_banners.scss";
+@import "../scss/components/_footer.scss";
+
+.container{
+    width: 90vw;
+    margin: 0 auto;
+}
+body{
+    background-color: rgba(246, 246, 248, 1);
+}
+@media screen and (max-width: map-get($grid-breakpoints, "sm")){
+    .container{
+        width: 100vw;
+    }
+}
+
+
+

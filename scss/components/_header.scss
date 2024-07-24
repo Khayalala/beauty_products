@@ -1,0 +1,211 @@
+header{
+    @include flex($display:flex, $wrap:wrap, $justify:center);
+    background-color: $primary-color;
+    .header_upper{
+        @include flex($display:flex, $align:center, $gap:80px);
+        margin: 16px auto;
+        .header_logo{
+            width: 178.26px;
+            height: 48.04px;
+            @include flex($display:flex, $align:center);
+            cursor: pointer;
+            .menu_icon, .header_logo_mob{
+                display: none;
+            }
+        }
+    
+        form{
+            @include flex($display:flex, $gap:32px);
+        }
+        .search_input{
+            position: relative;
+    
+            input{
+                background-color: #F6F6F8;
+                width: 592px;
+                height: 40px;
+                padding: 12px 0px 12px 56px;
+                border-radius: 8px;
+                border: none;
+            }
+            input::placeholder{
+                @include fonts($family:$primary-font-family, $size:$fs-sm, $line-height:16px, $text-align:null, $text-color:rgba(130, 130, 130, 1));
+            }
+    
+            .search_icon{
+                height: 16px;
+                width: 16px;
+                position: absolute;
+                z-index: 1;
+                top: 8px;
+                left: 16px;
+            }
+        }
+    
+        .language_options{
+            @include flex($display:flex, $align:center, $gap:8px);
+    
+            .globe_icon{
+                height: 20px;
+                width: 20px;
+            }
+            select{
+                border: none;
+                margin-top: 5px;
+                option{
+                    @include fonts($family:$primary-font-family, $size:$fs-md, $line-height:20px);
+                }
+            }
+        }
+    
+        .header_tools{
+            @include flex($display:flex, $align:center, $gap:24px);
+            div{
+                cursor: pointer;
+            }
+            .user_black{
+                width: 18px;
+                height: 20px;
+            }
+            .user_white{
+                display: none;
+            }
+            .heart_black{
+                width: 20px;
+                height: 17px;
+            }
+            .heart_white{
+                display: none;
+            }
+            .purchase_icons{
+                @include flex($display:flex, $align:center, $gap:12px);
+                .bag{
+                    width: 18px;
+                    height: 20px;
+                }
+                .cart{
+                    display: none;
+                }
+                .cart_item_count{
+                    width: 22px;
+                    height: 22px;
+                    background-color: $secondary-color;
+                    border-radius: 50%;
+                    @include fonts($family:$primary-font-family, $size:$fs-sm, $text-color:$primary-color);
+                    
+                    @include flex($display:flex, $justify:center, $align:center);
+                    padding: 3px 7px;
+                    margin-top: 5px;
+                }
+            }
+        }  
+    }
+ 
+
+    .navbar{
+        height: 40px;
+        width: 100%;
+        background-color: $background-color;
+        @include flex($display:flex, $justify:center, $align:center);
+        ul{
+            @include flex($display:flex, $align:center, $gap:40px);
+        }
+        ul .link{
+            @include fonts($family:$primary-font-family, $size:$fs-md, $line-height:24px, $text-color:$primary-color);
+        }
+    }
+}
+
+@media screen and (max-width: map-get($grid-breakpoints, "sm")){
+    header{
+        background-color: $background-color;
+        height: 136px;
+        .header_upper{
+            @include flex($wrap:wrap, $justify:center, $align:center, $gap:20px);
+            .header_logo{
+                gap: 7px;
+                margin-right: 35px;
+                .header_logo_web{
+                    display: none;
+                }
+                .menu_icon, .header_logo_mob{
+                    display: block;
+                }
+                .menu_icon{
+                    width: 20px;
+                    height: 14.5px;
+                    margin-top: 7px;
+                }
+                .header_logo_mob{
+                    width: 39.59px;
+                    height: 29px;
+                }
+            }
+    
+            form{
+                gap: 24px;
+                order: 1;
+            }
+            .search_input{   
+                input{
+                    width: 348px;
+
+                }
+            }
+            .language_options{
+                display: none;
+            }
+    
+            .header_tools{
+                gap: 20px;
+                .user_black{
+                    display: none;
+                }
+                .user_white{
+                    display: block;
+                    width: 18px;
+                    height: 20.71px;
+                }
+                .heart_black{
+                    display: none;
+                }
+                .heart_white{
+                    display: block;
+                    width: 20px;
+                    height: 17.61px;
+                }
+                .purchase_icons{
+                    display: inline-block;
+                    position: relative;
+                    .bag{
+                        display: none;
+                    }
+                    .cart{
+                        display: block;
+                        width: 20px;
+                        height: 20.71px;
+                        margin-top: 2px;
+                    }
+                    .cart_item_count{
+                        width: 18px;
+                        height: 18px;
+                        font-size: $fs-xs;
+                        padding: 3px 5px;
+                        position: absolute;
+                        bottom: 10px;
+                        left: 10px;
+                    }
+                }
+            }  
+        }
+        .navbar{
+            display: none;
+        }
+    }
+}
+
+
+
+
+
+

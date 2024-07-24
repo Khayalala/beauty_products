@@ -1,0 +1,312 @@
+@import "../scss/utilities/_reset.scss";
+@import "../scss/utilities/_fonts.scss";
+@import "../scss/utilities/_variables.scss";
+@import "../scss//utilities/_mixins.scss";
+@import "../scss/utilities/_global.scss";
+@import "../scss/components/_checkbox.scss";
+@import "../scss/components/_header.scss";
+@import "../scss/components/_footer.scss";
+
+header{
+    .header_upper{
+        .language_options{
+            select{
+                margin-top: 0;
+            }
+        }
+        .search_input{
+            .search_icon{
+                margin-top: 6px;
+            }
+        }
+    .header_tools{
+        .purchase_icons{
+            .cart_item_count{
+                margin-top: 0;
+            }
+        }
+    }
+    }
+}
+.basket_head{
+    @include flex($display:flex, $justify:space-between, $align:center);
+    padding: 48px 95px 0 125px;
+    background-color: rgba(246, 246, 248, 1);
+    span{
+        @include fonts($family:$primary-font-family, $size:$fs-xxl, $text-color:$background-color);
+    }
+    button{
+        background-color: $primary-color;
+        @include fonts($family:$primary-font-family, $size:$fs-md, $text-color:$background-color);
+        border: 1px solid rgba(130, 130, 130, 1);
+    }
+}
+.basket_container{
+    width: 100%;
+    background-color: rgba(246, 246, 248, 1);
+    @include flex($display:flex, $justify:center, $align: start, $gap:32px);
+    padding-top: 30px;
+
+    .products{
+        width: 904px;
+        height: 570px;
+        padding: 0 32px;   
+        @include flex($display:flex, $direction:column, $gap:16px); 
+        .product{
+            width: 100%;
+            height: 105px;
+            background-color: $primary-color;
+            @include flex($display:flex, $justify: space-around, $align:center);
+            input{
+                width: 24px;
+                height: 24px;
+            }
+            .item_img{
+                width: 62px;
+                height: 72px;
+            }
+            .info{
+                @include flex($display:flex, $direction:column, $align:start, $gap:13px);
+                .price{
+                    @include fonts($family:$primary-font-family, $size:$fs-md, $text-color:$secondary-color);
+                }
+                .name{
+                    @include fonts($family:$primary-font-family, $size:$fs-md, $text-color:$background-color);
+                }
+                .description{
+                    @include fonts($family:$primary-font-family, $size:$fs-sm, $text-color:$background-color);
+                    span{
+                        color: rgba(130, 130, 130, 1);
+                        margin-right: 5px;
+                    }
+                    span.size{
+                        margin-left: 53px;
+                    }
+                }
+            }
+            .item_count{
+                width: 118px;
+                height: 32px;
+                cursor: pointer;
+            }
+            .delete_icon{
+                width: 18px;
+                height: 20px;
+                cursor: pointer;
+            }
+        }
+    }
+    div.line{
+        display: none;
+    }
+    .total_container{
+        width: 280px;
+        height: 543px;
+        background-color: rgba(255, 255, 255, 1);
+        @include flex($display:flex, $direction:column, $justify:start, $gap:24px);
+        padding: 24px 16px;
+        span.total{
+            @include fonts($family:$primary-font-family, $size:$fs-xxl, $text-align:left, $text-color:$background-color);
+        }
+        div.total_info{
+            span{
+                @include fonts($family:$primary-font-family, $size:$fs-md, $text-align:left, $text-color:$background-color);
+            }
+            select{
+                border: none;
+                margin-right: 60px;
+            }
+
+            span.price{
+                @include fonts($size:$fs-lg, $weight:600, $text-align:right);
+            }
+        }
+        .line{
+            width: 240px;
+            height: 1px;
+            background-color: $background-color;
+        }
+        div.total_amount{
+            span{
+                @include fonts($family:$primary-font-family, $size:$fs-lg, $weight:600, $text-align:left, $text-color:$background-color);
+            }
+            span.price{
+                @include fonts($size:$fs-xxl, $weight:700, $text-color:$secondary-color);
+            }
+        }
+        div.total_info,  div.total_amount{
+            @include flex($display:flex, $justify:space-between, $align:center);
+        }
+        input{
+            width: 248px;
+            height: 48px;
+            background-color: rgba(242, 242, 242, 1);
+            padding: 12px 16px;
+            border-radius: 8px;
+            border: none;
+            margin-top: 20px;
+            &::placeholder{
+                @include fonts($family:$primary-font-family, $size:$fs-sm, $text-color:rgba(130, 130, 130, 1));
+            }
+        }
+        button{
+            width: 248px;
+            margin-top: 15px;
+        }
+        p.payment_agreement{
+            display: none;
+        }
+    }
+}
+footer{
+        .email-subscription{
+            display: none;
+        }
+}
+
+@media screen and (max-width: map-get($grid-breakpoints, "sm")){
+    .basket_head{
+        padding: 16px;
+        button{
+            display: none;
+        }
+    }
+    .basket_container{
+        flex-direction: column;
+        align-items: center;
+        padding-left: 16px;
+        padding-right: 16px;
+        .products{
+            width: 100vw;
+            height: auto;
+            padding: 0 0;   
+            @include flex($display:flex, $direction:column, $gap:16px); 
+            .product{
+                width: 100%;
+                height: 150px;
+                @include flex($display:flex, $justify: space-around, $align:center);
+                position: relative;
+                padding: 16px;
+                input{
+                    width: 24px;
+                    height: 24px;
+                    margin-right: 5px;
+                }
+                .item_img{
+                    width: 56px;
+                    height: 66px;
+                    margin-right: 0;
+                }
+                .info{
+                    @include flex($display:flex, $direction:column, $align:start, $gap:8px);
+                    margin-bottom: 60px;
+                    .price{
+                        @include fonts($family:$primary-font-family, $size:$fs-lg, $text-color:$secondary-color);
+                        position: absolute;
+                        top: 103px;
+                        right: 20px;
+                    }
+                    .name{
+                        @include fonts($family:$primary-font-family, $size:$fs-sm, $text-color:$background-color);
+                        max-width: 192px;
+                        height: 40px;
+                    }
+                    .description{
+                        @include fonts($family:$primary-font-family, $size:$fs-sm, $text-color:$background-color);
+                        span{
+                            color: rgba(130, 130, 130, 1);
+                            margin-right: 5px;
+                        }
+                        span.size{
+                            margin-left: 16px;
+                        }
+                    }
+                }
+                .item_count{
+                    width: 94px;
+                    height: 28px;
+                    cursor: pointer;
+                    position: absolute;
+                    top: 100px;
+                    left: 165px;
+                }
+                .delete_icon{
+                    width: 14px;
+                    cursor: pointer;
+                    position: absolute;
+                    bottom: 125px;
+                    right: 18px;
+                }
+            }
+        }
+        div.line{
+            display: block;
+            width: 100vw;
+            height: 1px;
+            background-color: $background-color;
+        }
+        .total_container{
+            width: 100%;
+            height: auto;
+            background-color: $primary-color;
+            @include flex($display:flex, $direction:column, $justify:start, $gap:24px);
+            padding: 24px 16px;
+            span.total{
+                @include fonts($family:$primary-font-family, $size:$fs-xxl, $text-align:left, $text-color:$background-color);
+            }
+            div.total_info{
+                span{
+                    @include fonts($family:$primary-font-family, $size:$fs-md, $text-align:left, $text-color:$background-color);
+                }
+                select{
+                    border: none;
+                    margin-right: 30px;
+                }
+    
+                span.price{
+                    @include fonts($size:$fs-lg, $weight:600, $text-align:right);
+                }
+            }
+            .line{
+                width: 100%;
+                height: 1px;
+                background-color: $background-color;
+            }
+            div.total_amount{
+                span{
+                    @include fonts($family:$primary-font-family, $size:$fs-lg, $weight:600, $text-align:left, $text-color:$background-color);
+                }
+                span.price{
+                    @include fonts($size:$fs-xxl, $weight:700, $text-color:$secondary-color);
+                }
+            }
+            div.total_info,  div.total_amount{
+                @include flex($display:flex, $justify:space-between, $align:center);
+            }
+            input{
+                width: 100%;
+                height: 48px;
+                background-color: rgba(242, 242, 242, 1);
+                padding: 12px 16px;
+                border-radius: 8px;
+                border: none;
+                margin-top: 20px;
+                &::placeholder{
+                    @include fonts($family:$primary-font-family, $size:$fs-sm, $text-color:rgba(130, 130, 130, 1));
+                }
+            }
+            button{
+                width: 100%
+            }
+            p.payment_agreement{
+                display: block;
+                @include fonts($family:$primary-font-family, $size:$fs-sm, $text-align:center, $text-color:$background-color);
+                max-width: 222px;
+                margin-left: 50px;
+            }
+        }
+    }
+    footer{
+        display: none;
+    }
+}

@@ -1,0 +1,161 @@
+footer{
+    .email-subscription {
+        text-align: center;
+        margin-top: 80px;
+        padding: 32px 0 56px 0;
+        background-color: rgb(233, 233, 244);
+        @include flex($display: flex, $direction: column, $align: center, $gap: 32px);
+        p {
+            @include fonts($family:$primary-font-family, $size:$fs-lg, $text-color:$primary-text-color);
+        }
+    
+        .email-input {
+            @include flex($display: flex, $justify: center, $align: center, $gap: 8px);
+    
+            input[type="email"]{
+                width: 384px;
+                height: 48px;
+                font-size: 1em;
+                border: none;
+                border-radius: 8px;
+                padding: 14px 16px;
+                &::placeholder{
+                    @include fonts($family:$primary-font-family, $size:$fs-md, $text-align:left, $text-color:rgba(130, 130, 130, 1));
+                }
+            }
+    
+            button {
+                width: 128px;
+                height: 48px;
+                padding: 14px 30px;
+                @include fonts($family:$primary-font-family, $size:$fs-md, $text-color: $primary-color);
+                border: none;
+                background-color: $background-color;
+                border-radius: 8px;
+                cursor: pointer;
+                transition: background-color 0.3s ease;
+    
+                &:hover {
+                    background-color: $secondary-color;
+                }
+            }
+        }
+    }
+    .footer_bottom{
+        background-color: $background-color;
+        height: 389px;
+        width: 100%;
+        @include flex($display:flex, $direction:column, $align:center);
+        .footer_links{
+            @include flex($display:flex, $justify:center, $align:start, $gap:160px);
+            .arzum_beauty, .menu, .help, .contact{
+                @include flex($display:flex, $direction:column, $align:start);
+                ul{
+                    padding-left: 0;
+                }
+            }
+            span{
+                @include fonts($family:$primary-font-family, $size:$fs-xxl, $text-color:$primary-color);
+                margin: 50px 0 30px 0;
+            }
+            .links{
+                @include flex($display:flex, $direction:column, $gap:12px);
+            }
+            .links .link a{
+                @include fonts($family:$primary-font-family, $size:$fs-md, $text-align: left, $text-color:$primary-color);
+                opacity: 80%;
+            }
+            .contact{ 
+                .social_media{
+                    @include flex($display:flex, $align:center, $gap:32px);
+                    .SM_icons{
+                        width: 20px;
+                        height: 20px;
+                    }
+                }
+                p{
+                    @include fonts($family:$primary-font-family, $size:$fs-lg, $text-color:$primary-color);
+                    margin-top: 40px;
+                    opacity: 80%;
+                }
+                .payment_cards{
+                    width: 240px;
+                    height: 56px;
+                }
+            }
+        }
+        .footer_line{
+            width: 1216px;
+            height: 1px;
+            opacity: 15%;
+            background-color: $primary-color;
+            margin: 24px auto;
+        }
+        .credits_policies{
+            width: 100%;
+            @include flex($display:flex, $justify:center, $align:center, $gap:720px);
+            .copyright{
+                @include fonts($family:$primary-font-family, $size:$fs-lg, $text-align:left, $text-color:$primary-color);
+                opacity: 80%;
+            }
+            .privacy_terms{
+                @include flex($display:flex, $align:center, $gap:48px);
+                a{
+                    @include fonts($family:$primary-font-family, $size:$fs-md, $text-align:left, $text-color:$primary-color);
+                    opacity: 80%;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: map-get($grid-breakpoints, "sm")){
+    footer{
+        .email-subscription{
+            margin-top: 50px;
+            p{
+                max-width: 242px;
+            }
+            .email-input{
+                gap: 4px;
+                input[type="email"]{
+                    width: 220px;
+                }
+                button {
+                    width: 104px;
+                    padding: 14px 22px;
+                }
+            }
+        }
+        .footer_bottom{
+            height: auto;
+            .footer_links{
+                @include flex($direction:column, $justify:center, $align:center, $gap:20px);
+                .arzum_beauty, .menu, .help, .contact{
+                    width: 100%;
+                    align-items: center;
+                }
+                .links{
+                    align-items: center;
+                }
+                .links .link a{
+                    text-align: center;
+                }
+            }
+            .footer_line{
+                width: 100%;
+                height: 1px;
+            }
+            .credits_policies{
+                gap:0;
+                .copyright{
+                    text-align: center;
+                    margin-bottom: 24px;
+                }
+                .privacy_terms{
+                    display: none;
+                }
+            }
+        }
+    }
+}

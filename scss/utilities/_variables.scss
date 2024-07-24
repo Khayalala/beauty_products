@@ -1,0 +1,27 @@
+// colors
+$primary-color: #fff;
+$secondary-color: rgba(237, 0, 140, 1);
+$background-color: rgba(19, 21, 21, 1); 
+$primary-text-color: rgba(51, 51, 51, 1);
+
+// fonts
+$primary-font-family: Euclid Circular A Regular; 
+
+$fs-xs: 10px;
+$fs-sm: 12px;
+$fs-md: 14px;
+$fs-lg: 16px;
+$fs-xl: 18px;
+$fs-xxl: 20px;
+$fs-xxxl: 22px;
+$fs-xxxxl: 24px;
+
+// breakpoints 
+$grid-breakpoints: (
+  "xs": 0,
+  "sm": 576px,
+  "md": 768px,
+  "lg": 992px,
+  "xl": 1200px,
+  "xxl": 1400px
+);
